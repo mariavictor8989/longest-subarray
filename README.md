@@ -1,4 +1,4 @@
-# Longest Balanced Subarray Project 🚀
+# Longest Balanced Subarray Project 
 
 This project provides two solutions to find the maximum length of a contiguous subarray with an equal number of 0s and 1s.
 
