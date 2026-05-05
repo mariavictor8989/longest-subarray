@@ -13,7 +13,18 @@ def find_max_length_recursive(nums, start, end):
                find_max_length_recursive(nums, start, end - 1))
 
 
-# Example Test
 if __name__ == "__main__":
-    test_nums = [0, 0, 1, 0, 1, 1, 0]
-    print(f"Longest Balanced Subarray (Recursive): {find_max_length_recursive(test_nums, 0, len(test_nums) - 1)}")
+    print("--- Longest Balanced Subarray (Recursive Approach) ---")
+    try:
+        user_input = input("Enter the binary array (0s and 1s) separated by spaces: ")
+        test_nums = [int(x) for x in user_input.split()]
+
+        if all(num in [0, 1] for num in test_nums):
+            result = find_max_length_recursive(test_nums, 0, len(test_nums) - 1)
+            print(f"\nTarget Array: {test_nums}")
+            print(f"Result -> Longest Balanced Subarray Length: {result}")
+        else:
+            print("Error: Please enter only 0s and 1s.")
+
+    except ValueError:
+        print("Error: Invalid input! Please enter numbers only.")
